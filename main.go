@@ -19,6 +19,7 @@ func main() {
 	http.Handle("/", templ.Handler(c))
 
 	http.Handle("/foo", templ.Handler(components.Foo()))
+	http.Handle("/bar", templ.Handler(components.Bar()))
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
