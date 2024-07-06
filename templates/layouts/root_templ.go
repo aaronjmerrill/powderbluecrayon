@@ -26,7 +26,7 @@ func Root(children ...templ.Component) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Powder Blue Crayon</title><!-- tailwind css --><link href=\"/static/css/tailwind.css\" rel=\"stylesheet\"><link href=\"/static/favicon.svg\" rel=\"icon\" type=\"image/x-icon\"></head><body>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\" class=\"dark text-green-900 bg-gray-200 dark:bg-gray-800 font-serif justify-center flex\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Powder Blue Crayon</title><!-- tailwind css --><link href=\"/static/css/tailwind.css\" rel=\"stylesheet\"><link href=\"/static/favicon.svg\" rel=\"icon\" type=\"image/x-icon\"></head><body class=\"w-[95%]\"><div id=\"top-nav\" class=\"justify-start\"><a href=\"/services\"><button class=\"btn\">services</button></a> <a href=\"/calculators\"><button class=\"btn\">calculators</button></a> <button class=\"btn\" onclick=\"toggleDarkMode()\">Dark Toggle</button></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -36,7 +36,7 @@ func Root(children ...templ.Component) templ.Component {
 				return templ_7745c5c3_Err
 			}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!-- htmx --><script src=\"/static/htmx/htmx.min.js\"></script></body></html>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script src=\"/static/scripts/htmx.min.js\"></script><script src=\"/static/scripts/powderbluecrayon.js\"></script></body><footer class=\"w-[95%]\"><a href=\"https://github.com/aaronjmerrill/powderbluecrayon\"><button>This website </button></a></footer></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
