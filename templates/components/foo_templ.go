@@ -26,7 +26,7 @@ func Foo() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button id=\"#foobar-wrapper\" hx-get=\"/bar\" hx-target=\"#foobar-wrapper\" class=\"btn bg-teal-200 p-4 rounded-lg \"><h2 class=\"text-red-500 font-bold text-xl\">Foo</h2></button>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button hx-get=\"/bar\" hx-target=\"#foobar-wrapper\" class=\"btn bg-teal-200 p-4 rounded-lg \"><h2 class=\"text-red-500 font-bold text-xl\">Foo</h2></button>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
