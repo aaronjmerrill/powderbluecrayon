@@ -27,4 +27,4 @@ tmp_dir = "bin"
   time = false
 
 [misc]
-  clean_on_exit = true
+  clean_on_exit = false
