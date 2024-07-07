@@ -12,14 +12,10 @@ templ Root(children ...templ.Component) {
 			<link href="/static/favicon.svg" rel="icon" type="image/x-icon"/>
 		</head>
 		<body class="w-[95%]">
-			<div id="top-nav" class="justify-start">
-				<a href="/services">
-					<button class="btn">services</button>
-				</a>
-				<a href="/calculators">
-					<button class="btn">calculators</button>
-				</a>
-				<button class="btn" onclick="toggleDarkMode()">Dark Toggle</button>
+			<div id="top-nav" class="justify-start flow-root space-x-1">
+				<button class="rounded px-1 bg-blue-400 float-start">services</button>
+				<button class="rounded px-1 bg-blue-400 float-start">calculators</button>
+				<button class="rounded px-1 bg-blue-400 float-end" onclick="toggleDarkMode()">Dark Toggle</button>
 			</div>
 			for _, child := range children {
 				@child
