@@ -15,8 +15,8 @@ func main() {
 	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	http.Handle("/", templ.Handler(layouts.Root(templates.Index())))
-	http.Handle("/calculators", templ.Handler(layouts.Root(templates.Index())))
+	http.Handle("/", templ.Handler(templates.Root(layouts.Index())))
+	http.Handle("/calculators", templ.Handler(templates.Root(layouts.Index())))
 
 	http.Handle("/foo", templ.Handler(components.Foo()))
 	http.Handle("/bar", templ.Handler(components.Bar()))
