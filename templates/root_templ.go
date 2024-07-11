@@ -8,6 +8,8 @@ package templates
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
+import "powderbluecrayon/templates/components"
+
 func Root(children ...templ.Component) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
@@ -26,7 +28,15 @@ func Root(children ...templ.Component) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\" class=\"dark text-green-900 bg-gray-200 dark:bg-gray-800 font-serif justify-center flex\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Powder Blue Crayon</title><!-- tailwind css --><link href=\"/static/css/tailwind.css\" rel=\"stylesheet\"><link href=\"/static/favicon.svg\" rel=\"icon\" type=\"image/x-icon\"></head><body class=\"w-[95%]\"><div id=\"top-nav\" class=\"justify-start flow-root space-x-1\"><button class=\"rounded px-1 bg-blue-400 float-start\">services</button> <button class=\"rounded px-1 bg-blue-400 float-start\">calculators</button> <button class=\"rounded px-1 bg-blue-400 float-end\" onclick=\"toggleDarkMode()\">Dark Toggle</button></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\" class=\"font-serif\" data-theme=\"dim\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Powder Blue Crayon</title><!-- tailwind css --><link href=\"/static/css/tailwind.css\" rel=\"stylesheet\"><link href=\"/static/favicon.svg\" rel=\"icon\" type=\"image/x-icon\"></head><body class=\"p-5\" onload=\"loadTheme()\"><div id=\"top-nav\" class=\"justify-start flow-root space-x-1\"><button class=\"btn btn-neutral btn-sm float-start\">services</button> <button class=\"btn btn-neutral btn-sm float-start\">calculators</button>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = components.DarkToggle().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -36,7 +46,15 @@ func Root(children ...templ.Component) templ.Component {
 				return templ_7745c5c3_Err
 			}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script src=\"/static/scripts/htmx.min.js\"></script><script src=\"/static/scripts/powderbluecrayon.js\"></script></body><footer class=\"w-[95%]\"><a href=\"https://github.com/aaronjmerrill/powderbluecrayon\"><button>This website </button></a></footer></html>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script src=\"/static/scripts/htmx.min.js\"></script><script src=\"/static/scripts/powderbluecrayon.js\"></script></body><footer class=\"w-[95%]\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = components.Github().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</footer></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
