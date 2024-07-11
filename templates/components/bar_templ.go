@@ -26,7 +26,7 @@ func Bar() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button hx-get=\"/foo\" hx-target=\"#foobar-wrapper\" class=\"bg-blue-400 p-4 rounded-lg\"><h2 class=\"font-bold text-xl\">Bar</h2></button>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button hx-get=\"/foo\" hx-target=\"#foobar-wrapper\" class=\"btn btn-primary\">Bar</button>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
