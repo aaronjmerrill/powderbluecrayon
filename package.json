@@ -1,0 +1,25 @@
+{
+  "name": "powderbluecrayon",
+  "version": "0.0.8",
+  "description": "personal site using htmx and go",
+  "main": "./static/scripts/powderbluecrayon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronjmerrill/powderbluecrayon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronjmerrill/powderbluecrayon/issues"
+  },
+  "homepage": "https://github.com/aaronjmerrill/powderbluecrayon#readme",
+  "dependencies": {
+    "tailwindcss": "^3.4.4"
+  },
+  "devDependencies": {
+    "daisyui": "^4.12.10"
+  }
+}

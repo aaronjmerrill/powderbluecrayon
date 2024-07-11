@@ -4,7 +4,11 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
-  darkMode: 'selector',
+  plugins: [
+    require('daisyui'),
+  ],
+  darkMode: ['class', '[data-theme="dim"]'],
+  daisyui: {
+    themes: ["corporate", "dim", "synthwave", "pastel"],
+  },
 }
-
