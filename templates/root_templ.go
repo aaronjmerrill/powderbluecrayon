@@ -28,7 +28,7 @@ func Root(children ...templ.Component) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\" class=\"font-serif\" data-theme=\"dim\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Powder Blue Crayon</title><!-- tailwind css --><link href=\"/static/css/tailwind.css\" rel=\"stylesheet\"><link href=\"/static/favicon.svg\" rel=\"icon\" type=\"image/x-icon\"></head><body class=\"p-5\" onload=\"loadTheme()\"><div id=\"top-nav\" class=\"justify-start flow-root space-x-1\"><button class=\"btn btn-neutral btn-sm float-start\">services</button> <button class=\"btn btn-neutral btn-sm float-start\">calculators</button>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\" class=\"font-serif\" data-theme=\"dim\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Powder Blue Crayon</title><!-- tailwind css --><link href=\"/static/css/tailwind.css\" rel=\"stylesheet\"><link href=\"/static/favicon.svg\" rel=\"icon\" type=\"image/x-icon\"></head><body class=\"p-5\" onload=\"loadTheme()\"><div id=\"top-nav\" class=\"justify-start flow-root space-x-1\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
