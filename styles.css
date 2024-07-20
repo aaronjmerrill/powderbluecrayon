@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-card {
+	@apply bg-base-200 px-8 py-10 rounded-md;
+}
