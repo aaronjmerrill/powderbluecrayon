@@ -9,6 +9,6 @@ module.exports = {
   ],
   darkMode: ['class', '[data-theme="dim"]'],
   daisyui: {
-    themes: ["corporate", "dim", "synthwave", "pastel"],
+    themes: ["corporate", "dim"],
   },
 }
