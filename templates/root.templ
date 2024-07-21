@@ -24,9 +24,11 @@ templ Root(children ...templ.Component) {
 			}
 			<script src="/static/scripts/htmx.min.js"></script>
 			<script src="/static/scripts/powderbluecrayon.js"></script>
-			<footer class="justify-start flow-root space-x-1">
-				@components.Github()
-				@components.LinkedIn()
+			<footer>
+				<div class="flex justify-center space-x-2">
+					@components.Github()
+					@components.LinkedIn()
+				</div>
 			</footer>
 		</body>
 	</html>
