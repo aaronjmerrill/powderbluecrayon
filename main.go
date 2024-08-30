@@ -6,6 +6,7 @@ import (
 
 	"powderbluecrayon/templates"
 	"powderbluecrayon/templates/layouts"
+	gameLayouts "github.com/powderbluecrayon/memory-game/templates/layouts"
 
 	"github.com/a-h/templ"
 )
@@ -15,7 +16,7 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	http.Handle("/", templ.Handler(templates.Root(layouts.Resume())))
-	http.Handle("/calculators", templ.Handler(templates.Root(layouts.Index())))
+	http.Handle("/game", templ.Handler(templates.Root(gameLayouts.GameLayout())))
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
